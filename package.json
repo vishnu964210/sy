@@ -1,0 +1,18 @@
+{
+  "name": "syntraxs-technologies-india",
+  "version": "1.0.0",
+  "description": "Syntraxs Technologies India - Event Architecture & Experiential Systems",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "syntraxs",
+    "event-architecture",
+    "awwwards",
+    "interactive-web",
+    "india"
+  ],
+  "author": "Syntraxs Technologies",
+  "license": "MIT"
+}

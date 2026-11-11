@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYNTRAXS TECHNOLOGIES INDIA // Event Architecture & Experiential Systems</title>
+  <meta name="description" content="Syntraxs Technologies India synthesizes physical architecture, real-time spatial technology, and cinematic scenography to construct defining moments across Indian landmarks." />
+  
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-lighting="cobalt">
+
+  <!-- Noise Overlay for Cinematic Texture -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Interactive Cursor-Follow Spotlight Layer -->
+  <div class="interactive-spotlight-layer" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       01. STARTING CINEMATIC PRELOADER ANIMATION (FEATURING PROVIDED LOGO)
+       ========================================================================== -->
+  <aside class="preloader" id="preloader" role="dialog" aria-label="Syntraxs Initialization Preloader">
+    <div class="preloader-shutter" aria-hidden="true">
+      <div class="preloader-shutter-bar"></div>
+      <div class="preloader-shutter-bar"></div>
+      <div class="preloader-shutter-bar"></div>
+      <div class="preloader-shutter-bar"></div>
+    </div>
+
+    <div class="preloader-content">
+      <!-- Metallic Logo Container with 3D Tilt -->
+      <div class="preloader-logo-wrapper card-3d-tilt">
+        <img id="preloaderLogoImg" class="preloader-logo-img" src="syntraxs-logo.jpg" alt="SYNTRAXS TECHNOLOGIES INDIA" />
+        <div class="preloader-laser-sweep" aria-hidden="true"></div>
+        <div class="preloader-specular-flare" aria-hidden="true"></div>
+      </div>
+
+      <!-- Preloader HUD Metrics -->
+      <div class="preloader-hud">
+        <div class="preloader-status-row">
+          <span style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display:inline-block; width:6px; height:6px; background: var(--accent-cyan); border-radius:50%; box-shadow: 0 0 8px var(--accent-cyan);"></span>
+            INDIAN ARCHITECTURE &amp; SPATIAL TELEMETRY
+          </span>
+          <span class="preloader-counter" id="preloaderCounter">0%</span>
+        </div>
+        <div class="preloader-bar-bg">
+          <div class="preloader-bar-fill" id="preloaderBar"></div>
+        </div>
+        <div class="preloader-log" id="preloaderLog">INITIALIZING INDIAN SPATIAL ARCHITECTURE ENGINE...</div>
+      </div>
+
+      <button class="preloader-skip-btn" id="preloaderSkip" aria-label="Skip preloader animation">
+        ENTER EXPERIENCE →
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       02. FIXED FLOATING HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      <!-- Brand Identity -->
+      <a href="#hero" class="brand-logo" aria-label="Syntraxs Technologies India Home">
+        <div class="brand-logo-icon">
+          <!-- Stylized Metallic S Icon -->
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M78 28L60 14H24L16 28L40 44H68L78 28Z" fill="url(#metalGrad1)"/>
+            <path d="M22 72L40 86H76L84 72L60 56H32L22 72Z" fill="url(#metalGrad2)"/>
+            <polygon points="42,46 62,46 54,54 34,54" fill="#00e5ff"/>
+            <defs>
+              <linearGradient id="metalGrad1" x1="16" y1="14" x2="78" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffffff"/>
+                <stop offset="0.5" stop-color="#8899aa"/>
+                <stop offset="1" stop-color="#334455"/>
+              </linearGradient>
+              <linearGradient id="metalGrad2" x1="22" y1="56" x2="84" y2="86" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffffff"/>
+                <stop offset="0.5" stop-color="#8899aa"/>
+                <stop offset="1" stop-color="#334455"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <div class="brand-logo-title">SYNTRAX<span>S</span></div>
+          <span class="brand-logo-subtitle">INDIA // ARCHITECTURE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#works" class="nav-link">LANDMARKS (INDIA)</a>
+        <a href="#spotlight-lab" class="nav-link">SPOTLIGHT LAB</a>
+        <a href="#capabilities" class="nav-link">CAPABILITIES</a>
+        <a href="#manifesto" class="nav-link">MANIFESTO</a>
+        <a href="#studios" class="nav-link">INDIAN STUDIOS</a>
+      </nav>
+
+      <!-- Utilities & Actions -->
+      <div class="header-actions">
+        <!-- Synthesized Audio Engine Toggle -->
+        <button class="sound-toggle-btn" id="soundToggleBtn" aria-label="Toggle synthesized UI audio">
+          <div class="audio-waveform" aria-hidden="true">
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+          </div>
+          <span class="sound-btn-text">AUDIO [OFF]</span>
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="#initiate" class="btn-primary">
+          <span class="btn-dot" aria-hidden="true"></span>
+          COMMISSION BUILD
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle architectural mega menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       03. FULLSCREEN ARCHITECTURAL MEGA MENU OVERLAY
+       ========================================================================== */ -->
+  <div class="mega-menu-overlay" id="megaMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+    <div class="mega-menu-inner">
+      <!-- Left Column: Indian Studio Clocks & System Diagnostics -->
+      <div class="menu-col-left">
+        <div class="menu-studio-times">
+          <h4>INDIAN METROPOLITAN HUBS [IST]</h4>
+          <div class="studio-clock-item">
+            <span class="studio-name">Bengaluru (National HQ)</span>
+            <span class="studio-time" id="mega-clock-blr">00:00:00 IST</span>
+          </div>
+          <div class="studio-clock-item">
+            <span class="studio-name">Mumbai (BKC Arena Studio)</span>
+            <span class="studio-time" id="mega-clock-bom">00:00:00 IST</span>
+          </div>
+          <div class="studio-clock-item">
+            <span class="studio-name">New Delhi / NCR</span>
+            <span class="studio-time" id="mega-clock-del">00:00:00 IST</span>
+          </div>
+          <div class="studio-clock-item">
+            <span class="studio-name">Hyderabad (HITEC City)</span>
+            <span class="studio-time" id="mega-clock-hyd">00:00:00 IST</span>
+          </div>
+          <div class="studio-clock-item">
+            <span class="studio-name">Chennai (Industrial Lab)</span>
+            <span class="studio-time" id="mega-clock-maa">00:00:00 IST</span>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); line-height: 1.6;">
+          <div>REGION: INDIA (IN-CENTRAL)</div>
+          <div>BIS STRUCTURAL PRECISION: 99.8%</div>
+          <div style="margin-top: 0.5rem; color: var(--accent-cyan);">PAN-INDIA DEPLOYMENT ACTIVE</div>
+        </div>
+      </div>
+
+      <!-- Center Column: Typographic Nav Links -->
+      <nav class="menu-nav-links">
+        <a href="#works" class="menu-nav-item" data-preview="works">
+          <span class="menu-nav-idx">01</span>
+          <span class="menu-nav-label">INDIAN LANDMARKS</span>
+        </a>
+        <a href="#spotlight-lab" class="menu-nav-item" data-preview="spotlight">
+          <span class="menu-nav-idx">02</span>
+          <span class="menu-nav-label">SPOTLIGHT LAB</span>
+        </a>
+        <a href="#capabilities" class="menu-nav-item" data-preview="capabilities">
+          <span class="menu-nav-idx">03</span>
+          <span class="menu-nav-label">SPATIAL DISCIPLINES</span>
+        </a>
+        <a href="#manifesto" class="menu-nav-item" data-preview="manifesto">
+          <span class="menu-nav-idx">04</span>
+          <span class="menu-nav-label">OUR MANIFESTO</span>
+        </a>
+        <a href="#studios" class="menu-nav-item" data-preview="studios">
+          <span class="menu-nav-idx">05</span>
+          <span class="menu-nav-label">INDIAN HUBS</span>
+        </a>
+        <a href="#initiate" class="menu-nav-item" data-preview="initiate">
+          <span class="menu-nav-idx">06</span>
+          <span class="menu-nav-label">COMMISSION BUILD</span>
+        </a>
+      </nav>
+
+      <!-- Right Column: Interactive Hover Preview Card -->
+      <div class="menu-col-right">
+        <div class="menu-preview-card card-3d-tilt">
+          <div class="menu-preview-media">
+            <img id="megaMenuPreviewImg" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Preview" />
+          </div>
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-cyan); text-transform: uppercase;" id="megaMenuPreviewLoc">NEW DELHI / MUMBAI</span>
+            <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; text-transform: uppercase;" id="megaMenuPreviewTitle">Indian Landmarks</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         04. HERO SECTION ("STEP INTO THE SPOTLIGHT" // INDIAN EDITION)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- 3D Geometric Truss Visualizer Canvas -->
+      <div class="hero-canvas-container" aria-hidden="true">
+        <canvas id="heroCanvas"></canvas>
+      </div>
+
+      <div class="container hero-content">
+        <!-- Floating Telemetry Pill -->
+        <div class="hero-pill-badge float-3d-element">
+          <span class="hero-pill-beacon" aria-hidden="true"></span>
+          <span>SYNTRAXS TECHNOLOGIES // INDIA'S FOREMOST EVENT ARCHITECTURE &amp; EXPERIENTIAL SYSTEMS</span>
+        </div>
+
+        <!-- Split-Line Editorial Headline -->
+        <h1 class="hero-title">
+          <span class="title-line line-1"><span class="title-line-inner">WE ENGINEER</span></span>
+          <span class="title-line line-2"><span class="title-line-inner highlight">IMMERSIVE MONUMENTS</span></span>
+          <span class="title-line line-3"><span class="title-line-inner">ACROSS INDIA.</span></span>
+        </h1>
+
+        <p class="hero-description">
+          Synthesizing physical architecture, real-time spatial technology, and theatrical scenography to construct defining moments across India's most iconic summits, stadiums, and visionary brand conclaves.
+        </p>
+
+        <!-- Hero Actions with 3D Hovers -->
+        <div class="hero-actions">
+          <a href="#works" class="btn-primary">
+            <span class="btn-dot" aria-hidden="true"></span>
+            EXPLORE INDIAN LANDMARKS
+          </a>
+          <a href="#spotlight-lab" class="btn-secondary">
+            ENTER SPOTLIGHT LAB →
+          </a>
+          <button class="btn-replay-intro" onclick="replayIntro()" title="Replay the cinematic brand introduction sequence">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            REPLAY INTRO
+          </button>
+        </div>
+
+        <!-- Metrics Bar Tickers with 3D Depth -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item card-3d-tilt">
+            <div class="metric-number" data-target="140" data-suffix="+">140<span>+</span></div>
+            <span class="metric-label">Built Indian Monuments</span>
+          </div>
+          <div class="metric-item card-3d-tilt">
+            <div class="metric-number" data-target="18" data-suffix="">18</div>
+            <span class="metric-label">Indian Metropolitan Hubs</span>
+          </div>
+          <div class="metric-item card-3d-tilt">
+            <div class="metric-number" data-target="99.8" data-suffix="%">99.8<span>%</span></div>
+            <span class="metric-label">BIS Structural Precision</span>
+          </div>
+          <div class="metric-item card-3d-tilt">
+            <div class="metric-number" data-target="12" data-suffix="">12</div>
+            <span class="metric-label">National Architecture Accolades</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05. INTERACTIVE SPOTLIGHT LAB (IVENTIONS SIGNATURE FEATURE)
+         ========================================================================== -->
+    <section class="spotlight-lab-section" id="spotlight-lab">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ INTERACTIVE HARDWARE ENGINE ]</span>
+          <h2 class="section-title">THEATRICAL SPOTLIGHT LAB</h2>
+          <p class="section-subtitle">
+            Light is not merely illumination—it is physical architecture. Calibrate live volumetric beams, manipulate photometric cues, and experience how our stage lighting dynamically directs human perception across Indian venues.
+          </p>
+        </div>
+
+        <div class="spotlight-console card-3d-tilt">
+          <!-- Interactive Stage Viewport -->
+          <div class="stage-preview-viewport">
+            <canvas id="stageCanvas"></canvas>
+            <div class="stage-hud-badge">STAGE RIG // VOLUMETRIC EMISSION ONLINE</div>
+            <div class="stage-tip">MOVE CURSOR ACROSS STAGE TO STEER VOLUMETRIC SPOTLIGHT BEAM</div>
+          </div>
+
+          <!-- Controls Panel -->
+          <div class="spotlight-controls">
+            <div>
+              <div class="control-group-title">PHOTOMETRIC RIG PRESETS</div>
+              <div class="lighting-presets-grid">
+                <button class="preset-chip active" data-preset="cobalt" aria-label="Cobalt Horizon lighting preset">
+                  <span class="preset-color-dot" style="background: #00e5ff; color: #00e5ff;"></span>
+                  <div class="preset-chip-info">
+                    <span class="preset-name">Cobalt Horizon</span>
+                    <span class="preset-temp">9,200K // Laser Cyan</span>
+                  </div>
+                </button>
+                <button class="preset-chip" data-preset="cyber" aria-label="Cyber Amber lighting preset">
+                  <span class="preset-color-dot" style="background: #ffb703; color: #ffb703;"></span>
+                  <div class="preset-chip-info">
+                    <span class="preset-name">Cyber Amber</span>
+                    <span class="preset-temp">2,800K // Solar Gold</span>
+                  </div>
+                </button>
+                <button class="preset-chip" data-preset="platinum" aria-label="Platinum Monolith lighting preset">
+                  <span class="preset-color-dot" style="background: #ffffff; color: #ffffff;"></span>
+                  <div class="preset-chip-info">
+                    <span class="preset-name">Platinum Monolith</span>
+                    <span class="preset-temp">6,500K // Pure White</span>
+                  </div>
+                </button>
+                <button class="preset-chip" data-preset="violet" aria-label="Laser Ultraviolet lighting preset">
+                  <span class="preset-color-dot" style="background: #d946ef; color: #d946ef;"></span>
+                  <div class="preset-chip-info">
+                    <span class="preset-name">Laser Ultraviolet</span>
+                    <span class="preset-temp">385nm // Deep Synth</span>
+                  </div>
+                </button>
+              </div>
+
+              <div class="control-group-title">OPTICAL BEAM DISPERSION</div>
+              <div class="slider-control-item">
+                <div class="slider-label-row">
+                  <span>VOLUMETRIC INTENSITY</span>
+                  <span id="intensityVal">85%</span>
+                </div>
+                <input type="range" class="custom-range" id="intensitySlider" min="20" max="100" value="85" />
+              </div>
+
+              <div class="slider-control-item">
+                <div class="slider-label-row">
+                  <span>BEAM SPREAD ANGLE</span>
+                  <span id="angleVal">45°</span>
+                </div>
+                <input type="range" class="custom-range" id="angleSlider" min="15" max="85" value="45" />
+              </div>
+            </div>
+
+            <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+                ACTIVE FIXTURES: 36x ROBOTIC MOVING HEADS (INDIAN ARENA SPEC)
+              </span>
+              <a href="#initiate" class="btn-secondary" style="padding: 0.5rem 1.1rem; font-size: 0.75rem;">
+                SPECIFY RIG →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06. SELECTED WORKS & PORTFOLIO SHOWCASE (INDIAN LANDMARKS)
+         ========================================================================== -->
+    <section class="works-section" id="works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ PAN-INDIA PORTFOLIO ARCHIVES ]</span>
+          <h2 class="section-title">LANDMARK DEPLOYMENTS ACROSS INDIA</h2>
+          <p class="section-subtitle">
+            From national summits at Bharat Mandapam to monumental pavilions at Jio World Centre Mumbai and HITEX Hyderabad, explore our landmark spatial builds.
+          </p>
+        </div>
+
+        <!-- Filter Bar & Layout Switcher -->
+        <div class="works-filter-bar">
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">ALL INDIAN BUILDS (06)</button>
+            <button class="filter-tab" data-filter="keynotes">IMMERSIVE KEYNOTES (02)</button>
+            <button class="filter-tab" data-filter="pavilions">PAVILIONS (02)</button>
+            <button class="filter-tab" data-filter="xr">XR ARENAS (01)</button>
+            <button class="filter-tab" data-filter="installations">SPATIAL INSTALLATIONS (01)</button>
+          </div>
+
+          <div class="view-mode-toggle">
+            <button class="view-mode-btn active" id="viewGridBtn" aria-label="Grid layout view" title="Grid View">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h7v7H4zm11 0h7v7h-7zM4 15h7v7H4zm11 0h7v7h-7z"/></svg>
+            </button>
+            <button class="view-mode-btn" id="viewListBtn" aria-label="List layout view" title="Architectural List View">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h18V4H4zm0 6h18v-2H4zm0 6h18v-2H4z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid Container -->
+        <div class="works-grid" id="worksGrid">
+          <!-- Populated dynamically via app.js -->
+        </div>
+
+        <!-- Projects List Container (Hidden by default) -->
+        <div class="works-list" id="worksList" style="display: none;">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+
+      <!-- Floating Preview Card (for List View Hover) -->
+      <div class="floating-preview-card" id="floatingPreview" aria-hidden="true">
+        <img id="floatingPreviewImg" src="" alt="Project Preview" />
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07. CAPABILITIES & ARCHITECTURAL DISCIPLINES ("WHAT WE DO")
+         ========================================================================== -->
+    <section class="capabilities-section" id="capabilities">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ MULTI-DISCIPLINARY SUITE ]</span>
+          <h2 class="section-title">WHAT WE DO</h2>
+          <p class="section-subtitle">
+            We operate across five synergistic disciplines, bridging visionary spatial concepts with relentless physical-to-digital engineering execution across India.
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+          <!-- Left Column: Interactive Capability Accordion -->
+          <div class="capability-accordion-list" id="capabilityList">
+            <!-- Rendered by app.js -->
+          </div>
+
+          <!-- Right Column: Interactive CAD Blueprint Simulator -->
+          <div class="blueprint-simulator-view card-3d-tilt">
+            <div class="blueprint-hud-top">
+              <span id="blueprintHudSpec">CAD PROTOCOL // SPATIAL ARCHITECTURE</span>
+              <span>SCALE 1:50 // BIS METRIC</span>
+            </div>
+
+            <div class="blueprint-stage-graphic">
+              <svg id="blueprintStageSvg" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Dynamically updated by app.js -->
+              </svg>
+            </div>
+
+            <div class="blueprint-hud-bottom">
+              <span>INDIAN STANDARDS: SEISMIC ZONE IV &amp; WIND THROW COMPLIANT</span>
+              <span style="color: var(--accent-cyan);">CAD VALIDATED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         08. BRAND MANIFESTO // KINETIC SCROLLING TEXT
+         ========================================================================== -->
+    <section class="manifesto-section" id="manifesto">
+      <!-- Infinite Kinetic Marquee -->
+      <div class="manifesto-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-phrase">WE DON'T JUST PRODUCE EVENTS // <span>WE CONSTRUCT INDIAN MONUMENTS</span> //</span>
+          <span class="marquee-phrase">ARCHITECTURE IN MOTION // <span>SHAPING THE FUTURE OF BHARAT</span> //</span>
+          <span class="marquee-phrase">WE DON'T JUST PRODUCE EVENTS // <span>WE CONSTRUCT INDIAN MONUMENTS</span> //</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <span class="section-tag">[ OUR CORE BELIEF ]</span>
+        <div class="manifesto-spotlight-text" id="manifestoText">
+          <span class="manifesto-word">Spaces</span> <span class="manifesto-word">shape</span> <span class="manifesto-word">human</span> <span class="manifesto-word">destiny.</span> 
+          <span class="manifesto-word">In</span> <span class="manifesto-word">an</span> <span class="manifesto-word">era</span> <span class="manifesto-word">of</span> <span class="manifesto-word">fleeting</span> <span class="manifesto-word">digital</span> <span class="manifesto-word">impressions,</span> 
+          <span class="manifesto-word">tangible</span> <span class="manifesto-word">physical</span> <span class="manifesto-word">monuments</span> <span class="manifesto-word">infused</span> <span class="manifesto-word">with</span> <span class="manifesto-word">intelligent</span> 
+          <span class="manifesto-word">technology</span> <span class="manifesto-word">are</span> <span class="manifesto-word">the</span> <span class="manifesto-word">ultimate</span> <span class="manifesto-word">conduits</span> <span class="manifesto-word">of</span> 
+          <span class="manifesto-word">conviction,</span> <span class="manifesto-word">culture,</span> <span class="manifesto-word">and</span> <span class="manifesto-word">unforgettable</span> <span class="manifesto-word">national</span> <span class="manifesto-word">pride.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         09. INDIAN METROPOLITAN HUBS & LIVE STUDIOS
+         ========================================================================== -->
+    <section class="studios-section" id="studios">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ PAN-INDIA FOOTPRINT ]</span>
+          <h2 class="section-title">INDIAN STUDIOS &amp; HUBS</h2>
+          <p class="section-subtitle">
+            Synchronized across five Indian tech and commercial capitals, our architects, structural engineers, and creative technologists deploy turnkey builds nationwide.
+          </p>
+        </div>
+
+        <div class="studios-grid">
+          <!-- Bengaluru HQ -->
+          <div class="studio-card card-3d-tilt">
+            <div>
+              <span class="studio-card-role">National Headquarters &amp; R&amp;D</span>
+              <h3 class="studio-card-city">BENGALURU</h3>
+            </div>
+            <div class="studio-card-time" id="clock-blr">00:00:00 IST</div>
+            <div class="studio-card-coords">12.9716° N, 77.5946° E // Karnataka</div>
+          </div>
+
+          <!-- Mumbai -->
+          <div class="studio-card card-3d-tilt">
+            <div>
+              <span class="studio-card-role">Commercial &amp; Arena Studio</span>
+              <h3 class="studio-card-city">MUMBAI</h3>
+            </div>
+            <div class="studio-card-time" id="clock-bom">00:00:00 IST</div>
+            <div class="studio-card-coords">19.0760° N, 72.8777° E // BKC, Maharashtra</div>
+          </div>
+
+          <!-- New Delhi -->
+          <div class="studio-card card-3d-tilt">
+            <div>
+              <span class="studio-card-role">National Conclaves &amp; Diplomatic Hub</span>
+              <h3 class="studio-card-city">NEW DELHI</h3>
+            </div>
+            <div class="studio-card-time" id="clock-del">00:00:00 IST</div>
+            <div class="studio-card-coords">28.6139° N, 77.2090° E // NCR</div>
+          </div>
+
+          <!-- Hyderabad -->
+          <div class="studio-card card-3d-tilt">
+            <div>
+              <span class="studio-card-role">Cyber Architecture &amp; XR Studio</span>
+              <h3 class="studio-card-city">HYDERABAD</h3>
+            </div>
+            <div class="studio-card-time" id="clock-hyd">00:00:00 IST</div>
+            <div class="studio-card-coords">17.3850° N, 78.4867° E // HITEC City, Telangana</div>
+          </div>
+
+          <!-- Chennai -->
+          <div class="studio-card card-3d-tilt">
+            <div>
+              <span class="studio-card-role">Coastal Monuments &amp; Fabrication Lab</span>
+              <h3 class="studio-card-city">CHENNAI</h3>
+            </div>
+            <div class="studio-card-time" id="clock-maa">00:00:00 IST</div>
+            <div class="studio-card-coords">13.0827° N, 80.2707° E // Tamil Nadu</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. INTERACTIVE PROJECT CONFIGURATOR (IN RUPEES ₹ CRORES)
+         ========================================================================== -->
+    <section class="configurator-section" id="initiate">
+      <div class="container">
+        <div class="configurator-card card-3d-tilt">
+          <div style="text-align: center; margin-bottom: 3rem;">
+            <span class="section-tag">[ INDIAN COMMISSION SPECIFICATION ]</span>
+            <h2 class="section-title" style="font-size: clamp(2rem, 3.5vw, 2.8rem);">INITIATE YOUR NEXT MONUMENT IN INDIA</h2>
+            <p class="section-subtitle" style="margin: 0 auto;">
+              Configure your project scope below for immediate Indian structural scheduling and architectural budgeting in INR (₹).
+            </p>
+          </div>
+
+          <form id="configForm">
+            <!-- Step 1: Dimension -->
+            <div class="config-step">
+              <div class="config-step-title">
+                <span>01 // EXPERIENCE DIMENSION</span>
+              </div>
+              <div class="config-options-grid">
+                <button type="button" class="config-btn-option selected" data-config-group="dimension">
+                  Architectural Pavilion
+                </button>
+                <button type="button" class="config-btn-option" data-config-group="dimension">
+                  Keynote Stage &amp; Arena
+                </button>
+                <button type="button" class="config-btn-option" data-config-group="dimension">
+                  Interactive Exhibit
+                </button>
+                <button type="button" class="config-btn-option" data-config-group="dimension">
+                  XR &amp; Virtual Arena
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Scale -->
+            <div class="config-step">
+              <div class="config-step-title">
+                <span>02 // STRUCTURAL FOOTPRINT &amp; AUDIENCE</span>
+              </div>
+              <div class="config-options-grid">
+                <button type="button" class="config-btn-option">
+                  Bespoke (&lt;1,000 m²)
+                </button>
+                <button type="button" class="config-btn-option selected" data-config-group="scale">
+                  Enterprise (1,000 - 5,000 m²)
+                </button>
+                <button type="button" class="config-btn-option" data-config-group="scale">
+                  Monumental (5,000 m²+)
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Technology Integration -->
+            <div class="config-step">
+              <div class="config-step-title">
+                <span>03 // EXPERIENTIAL TECH INTEGRATIONS (MULTI-SELECT)</span>
+              </div>
+              <div class="config-options-grid">
+                <button type="button" class="config-btn-option selected" data-config-group="tech">
+                  Kinetic Trusses
+                </button>
+                <button type="button" class="config-btn-option selected" data-config-group="tech">
+                  360° Holo-Projection
+                </button>
+                <button type="button" class="config-btn-option" data-config-group="tech">
+                  Generative Real-Time UE5
+                </button>
+                <button type="button" class="config-btn-option" data-config-group="tech">
+                  Spatial Audio Array
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Contact & Brief -->
+            <div class="config-step">
+              <div class="config-step-title">
+                <span>04 // COMMISSION DETAILS</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                <input type="text" class="config-input-field" placeholder="Full Name / Designation" required />
+                <input type="email" class="config-input-field" placeholder="Official / Corporate Email" required />
+                <select class="config-input-field" required style="background: #0E121B; color: #fff;">
+                  <option value="" disabled selected>Target Indian City / State</option>
+                  <option value="bengaluru">Bengaluru, Karnataka</option>
+                  <option value="mumbai">Mumbai, Maharashtra</option>
+                  <option value="delhi">New Delhi / NCR</option>
+                  <option value="hyderabad">Hyderabad, Telangana</option>
+                  <option value="chennai">Chennai, Tamil Nadu</option>
+                  <option value="pune">Pune, Maharashtra</option>
+                  <option value="goa">Goa</option>
+                  <option value="udaipur">Udaipur / Jaipur, Rajasthan</option>
+                  <option value="kolkata">Kolkata, West Bengal</option>
+                  <option value="other">Other Indian City / Global</option>
+                </select>
+              </div>
+              <textarea id="configBrief" class="config-input-field" rows="3" placeholder="Brief project overview, intended venue (e.g. Bharat Mandapam, Jio World, HITEX), or specific design ambitions..." style="resize: vertical;"></textarea>
+            </div>
+
+            <!-- Live Estimation Summary in Indian Rupees -->
+            <div class="config-estimate-summary">
+              <div>
+                <span class="estimate-label">ESTIMATED ARCHITECTURAL SCOPE (INR)</span>
+                <div class="estimate-val" id="estimateCost">₹7.30 Crores INR</div>
+              </div>
+              <div>
+                <span class="estimate-label">ESTIMATED TURNKEY TIMELINE</span>
+                <div class="estimate-val" id="estimateTime" style="color: #fff;">18 - 22 WEEKS</div>
+              </div>
+              <button type="submit" class="btn-primary" style="padding: 1rem 2.2rem; font-size: 0.95rem;">
+                <span class="btn-dot"></span> TRANSMIT SPECIFICATION →
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       11. PROJECT DETAIL MODAL / DRAWER
+       ========================================================================== -->
+  <div class="project-modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-label="Project Details">
+    <div class="project-modal-container">
+      <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close modal window">✕</button>
+      <div id="projectModalBody">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       12. SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>SYNTRAX<span>S</span> TECHNOLOGIES INDIA</h3>
+          <p>
+            India’s premier event architecture and experiential technology enterprise. Designing monumental spatial experiences across Indian capitals.
+          </p>
+          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-cyan);">
+            CIN: U72900KA2024PTC184920 // GSTIN REGISTERED
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>ARCHITECTURE</h4>
+          <ul class="footer-links-list">
+            <li><a href="#works" class="footer-link">Landmark Deployments</a></li>
+            <li><a href="#capabilities" class="footer-link">BIS Structural Engineering</a></li>
+            <li><a href="#spotlight-lab" class="footer-link">Theatrical Lighting Lab</a></li>
+            <li><a href="#manifesto" class="footer-link">National Manifesto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>INDIAN STUDIOS</h4>
+          <ul class="footer-links-list">
+            <li><a href="#studios" class="footer-link">Bengaluru National HQ</a></li>
+            <li><a href="#studios" class="footer-link">Mumbai BKC Arena Studio</a></li>
+            <li><a href="#studios" class="footer-link">New Delhi Conclave Studio</a></li>
+            <li><a href="#studios" class="footer-link">Hyderabad HITEC City</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>COMMISSIONS (INDIA)</h4>
+          <ul class="footer-links-list">
+            <li><a href="#initiate" class="footer-link">Commission Monument</a></li>
+            <li><a href="mailto:india.partners@syntraxs.com" class="footer-link">india.partners@syntraxs.com</a></li>
+            <li><a href="tel:+918049201800" class="footer-link">+91 (080) 4920 1800 (BLR)</a></li>
+            <li><a href="tel:+912267804400" class="footer-link">+91 (022) 6780 4400 (BOM)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 SYNTRAXS TECHNOLOGIES INDIA PRIVATE LIMITED. ALL RIGHTS RESERVED.</div>
+        <div style="display: flex; gap: 2rem;">
+          <a href="#" class="footer-link">BIS SAFETY DIRECTIVE</a>
+          <a href="#" class="footer-link">PRIVACY POLICY</a>
+          <a href="#" class="footer-link">BACK TO TOP ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Brand Assets & Scripts -->
+  <script src="logo-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
